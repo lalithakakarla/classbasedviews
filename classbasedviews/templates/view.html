@@ -1,0 +1,21 @@
+<table align="center" border="2">
+    <tr>
+        <th>IDNO</th>
+        <th>NAME</th>
+        <th>SALARY</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+    </tr>
+    {% for x in object_list %}
+        <tr>
+        <th>{{ x.idno }}</th>
+        <th>{{ x.name }}</th>
+        <th>{{ x.salary }}</th>
+
+        <th><a href="/update{{ x.idno }}/">Yes</a> </th>
+        <th><a href="/delete{{ x.idno }}/">Yes</a> </th>
+        <th><a href="/viewone{{ x.idno }}/">viewone</a> </th>
+
+        </tr>
+    {% endfor %}
+</table>
